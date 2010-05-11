@@ -54,7 +54,8 @@ namespace DirectoryRecurser
 			
 			foreach(string dir in Directory.GetDirectories(basePath))
 			{
-				MultilineElement element = new MultilineElement (dir);
+				string strDir = dir;
+				MultilineElement element = new MultilineElement (strDir);
 				element.Tapped += delegate { ShowDirectoryTree(dir, true); };
 			
 				sect.Add(element);
@@ -62,8 +63,9 @@ namespace DirectoryRecurser
 			
 			foreach(string fil in Directory.GetFiles(basePath))
 			{
+				string strFil = fil;
 				MultilineElement element = new MultilineElement (basePath);
-				element.Tapped += delegate { Utilities.UnsuccessfulMessage("File: " + fil + " tapped"); };
+				element.Tapped += delegate { Utilities.UnsuccessfulMessage("File: " + strFil + " tapped"); };
 			
 				sect.Add(element);
 				
