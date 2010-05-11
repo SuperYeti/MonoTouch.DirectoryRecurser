@@ -30,7 +30,7 @@ namespace DirectoryRecurser
 			
 			window.AddSubview (navigation.View);
 			
-			ShowDirectoryTree("/Users/wmoxley/Documents/", false);
+			ShowDirectoryTree(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), false);
 			
 			return true;
 		}
