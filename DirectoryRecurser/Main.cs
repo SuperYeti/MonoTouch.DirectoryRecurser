@@ -48,6 +48,9 @@ namespace DirectoryRecurser
 			
 		}
 		
+		static UIImage imgFolder = UIImage.FromFile("Images/Folder.png");
+		static UIImage imgFile = UIImage.FromFile("Images/File.png");
+		
 		private Section BuildListing(string basePath)
 		{
 			Section sect = new Section();
@@ -55,7 +58,7 @@ namespace DirectoryRecurser
 			foreach(string dir in Directory.GetDirectories(basePath))
 			{
 				string strDir = dir;
-				MultilineElement element = new MultilineElement (strDir);
+				ImageStringElement element = new ImageStringElement (strDir.Replace(basePath,""), imgFolder);
 				element.Tapped += delegate { ShowDirectoryTree(strDir, true); };
 			
 				sect.Add(element);
@@ -64,7 +67,7 @@ namespace DirectoryRecurser
 			foreach(string fil in Directory.GetFiles(basePath))
 			{
 				string strFil = fil;
-				MultilineElement element = new MultilineElement (strFil);
+				ImageStringElement element = new ImageStringElement (strFil.Replace(basePath,""), imgFile);
 				element.Tapped += delegate { Utilities.UnsuccessfulMessage("File: " + strFil + " tapped"); };
 			
 				sect.Add(element);

@@ -1,15 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" ctype="Workspace" />
-  <MonoDevelop.Ide.Workbench ctype="Workbench">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DirectoryRecurser/Main.cs" ctype="Workbench">
     <Files>
-      <File FileName="DirectoryRecurser/Main.cs" Line="34" Column="4" />
+      <File FileName="DirectoryRecurser/Main.cs" Line="52" Column="19" />
+      <File FileName="../ClarityMobile/ClarityMobile/Projects.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="DirectoryRecurser" expanded="True">
-            <Node name="Main.cs" selected="True" />
-          </Node>
+          <Node name="DirectoryRecurser" expanded="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">
