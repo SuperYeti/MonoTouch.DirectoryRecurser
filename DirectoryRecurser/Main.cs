@@ -30,7 +30,7 @@ namespace DirectoryRecurser
 			
 			window.AddSubview (navigation.View);
 			
-			ShowDirectoryTree(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), false);
+			ShowDirectoryTree("/",false);//Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), false);
 			
 			return true;
 		}
@@ -56,7 +56,7 @@ namespace DirectoryRecurser
 			{
 				string strDir = dir;
 				MultilineElement element = new MultilineElement (strDir);
-				element.Tapped += delegate { ShowDirectoryTree(dir, true); };
+				element.Tapped += delegate { ShowDirectoryTree(strDir, true); };
 			
 				sect.Add(element);
 			}
@@ -64,7 +64,7 @@ namespace DirectoryRecurser
 			foreach(string fil in Directory.GetFiles(basePath))
 			{
 				string strFil = fil;
-				MultilineElement element = new MultilineElement (basePath);
+				MultilineElement element = new MultilineElement (strFil);
 				element.Tapped += delegate { Utilities.UnsuccessfulMessage("File: " + strFil + " tapped"); };
 			
 				sect.Add(element);

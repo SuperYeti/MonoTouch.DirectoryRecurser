@@ -2,7 +2,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" ctype="Workspace" />
   <MonoDevelop.Ide.Workbench ctype="Workbench">
     <Files>
-      <File FileName="DirectoryRecurser/Main.cs" Line="75" Column="1" />
+      <File FileName="DirectoryRecurser/Main.cs" Line="34" Column="4" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,6 +11,9 @@
             <Node name="Main.cs" selected="True" />
           </Node>
         </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
