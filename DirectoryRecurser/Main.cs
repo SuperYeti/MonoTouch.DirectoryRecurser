@@ -58,7 +58,11 @@ namespace DirectoryRecurser
 			foreach(string dir in Directory.GetDirectories(basePath))
 			{
 				string strDir = dir;
-				ImageStringElement element = new ImageStringElement (strDir.Replace(basePath,""), imgFolder);
+				string strDirDisplay = strDir.Replace(basePath,"");
+				if(strDirDisplay[0] == '/')
+					strDirDisplay = strDirDisplay.Remove(0,1);
+				
+				ImageStringElement element = new ImageStringElement (strDirDisplay, imgFolder);
 				element.Tapped += delegate { ShowDirectoryTree(strDir, true); };
 			
 				sect.Add(element);
@@ -67,7 +71,11 @@ namespace DirectoryRecurser
 			foreach(string fil in Directory.GetFiles(basePath))
 			{
 				string strFil = fil;
-				ImageStringElement element = new ImageStringElement (strFil.Replace(basePath,""), imgFile);
+				string strFilDisplay = strFil.Replace(basePath,"");
+				if(strFilDisplay[0] == '/')
+					strFilDisplay = strFilDisplay.Remove(0,1);
+				
+				ImageStringElement element = new ImageStringElement (strFilDisplay, imgFile);
 				element.Tapped += delegate { Utilities.UnsuccessfulMessage("File: " + strFil + " tapped"); };
 			
 				sect.Add(element);
